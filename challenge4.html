@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Challenge 4</title>
+    <style>
+    body{
+        margin: 2%;
+        border: 1px solid black;
+        background-color: #F2B705;
+    }
+    #image{
+        line-height:325px;
+        width: 388px;
+        height: 325px;
+        border:5px solid black;
+        margin:0 auto;
+        background-repeat: no-repeat;
+        color:#FFFFFF;
+        text-align: center;
+        background-color: #8C1C03;
+        background-size: 100%;
+        margin-bottom:25px;
+        font-size:150%;
+    }
+    .preview{
+        width:10%;
+        margin-left:17%;
+        border: 10px solid black;
+    }
+    img{
+        width:95%;
+    }
+    h1{
+        text-align: center;
+    }
+    </style>
+
+    <script>
+
+  function upDate(previewPic){
+    var mousePic = document.getElementById("image");
+    mousePic.style.backgroundImage = "url("+previewPic.src+")";
+    mousePic.style.backgroundColor = "red";
+    mousePic.innerHTML = previewPic.alt;
+  	}
+
+  	function unDo(){
+      var mouseOff = document.getElementById("image");
+      mouseOff.style.backgroundImage="url("+''+")";
+      mouseOff.innerHTML = "Hover over an image below to display";
+  	}
+    </script>
+</head>
+
+<body>
+    <h1>Challenge 5</h1>
+        <div id = "image">
+            Hover or tab over/into an image below.
+        </div>
+
+        <!-- Your code goes in the img tag below.  Make sure to react to "hovering" and "tabbing": -->
+        <img class = "preview" tabindex = "1"
+            alt = "Owl in tree"
+            src = "https://i.imgur.com/AfM4tht.jpg" onmouseover = "upDate(this)" onmouseout = "unDo()" onfocus = "upDate(this)"
+           onclur = "unDo()">
+
+
+        <!-- Your code goes in the img tag below.  Make sure to react to "hovering" and "tabbing": -->
+        <img class = "preview" tabindex = "1"
+            alt = "fox"
+            src = "https://i.imgur.com/88F0pa2.jpg" onmouseover = "upDate(this)" onmouseout = "unDo()" onfocus = "upDate(this)"
+           onclur = "unDo()">
+
+        <!-- Your code goes in the img tag below.  Make sure to react to "hovering" and "tabbing": -->
+        <img class = "preview" tabindex = "1"
+            src = "https://i.imgur.com/FhFOiR8.jpg"
+            alt = "beach" onmouseover = "upDate(this)" onmouseout = "unDo()" onfocus = "upDate(this)"
+           onclur = "unDo()">
+
+</body>
+</html>
